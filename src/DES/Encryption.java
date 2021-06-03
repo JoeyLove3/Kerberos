@@ -29,7 +29,7 @@ public class Encryption {
             char[] R0 = new char[32];
             System.arraycopy(plainarrays, 0, L0, 0, 32);
             System.arraycopy(plainarrays, 32, R0, 0, 32);
-
+            
             //16轮迭代
             for (int round = 0; round < 16; round++) {
                 char[] key0 = Deal.keychange(C0, D0, round);
@@ -52,8 +52,13 @@ public class Encryption {
             for (int j = 0; j < cipher.length; j++) {
                 ciphers[j] = cipher[IP2[j] - 1];
             }
-            ciphertext += Transition.transition2(String.copyValueOf(ciphers));
+            ciphertext += new String(ciphers);
         }
         return ciphertext;
+    }
+    public static void main(String[] args){
+        String plaintext="LDleZcRN0001192168137003100116226867305220200000";
+        String key="12345678";
+        System.out.println(encryption(plaintext,key));
     }
 }

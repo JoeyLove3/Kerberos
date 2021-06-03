@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Decryption {
+
+
     public static String decryption(String M,String K) {
         String plaintext=M;
         String key=K;
@@ -18,7 +20,6 @@ public class Decryption {
         System.arraycopy(keyarray, 0, C0, 0, 28);
         System.arraycopy(keyarray, 28, D0, 0, 28);
         //明文处理
-        plaintext=Transition.transition1(plaintext);
         String cipherss="";
         String ciphertext;
         for(int i=0;i<plaintext.length()/64;i++) {
@@ -55,5 +56,10 @@ public class Decryption {
         }
         ciphertext=Transition.transition2(cipherss);
         return ciphertext;
+    }
+    public static void main(String[] args){
+        String plaintext="";
+        String key="";
+        System.out.println(decryption(plaintext,key));
     }
 }

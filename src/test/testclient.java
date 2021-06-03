@@ -8,17 +8,17 @@ public class testclient {
 
     public static void main(String[] args) {
         int port = 46322;
-        String ip = new String("192.168.137.1");
+        String ip = "192.168.137.172";
         testclient client = new testclient();
         client.clientTest(ip, port);
     }
 
     public void clientTest(String ip, int port){
-        Socket clientSocket = null;
-        BufferedReader br = null;
-        PrintWriter pw = null;
+        Socket clientSocket;
+        BufferedReader br;
+        PrintWriter pw;
         Scanner sc = new Scanner(System.in);
-        String buf = null;
+        String buf;
 
         //connect and communicate
         try {

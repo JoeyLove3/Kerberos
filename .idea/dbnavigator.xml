@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="e8aa6b6c-7353-4687-8f58-797c57f1a6fb">
-        <schema name="kerberos" object-types="table, view, procedure, function" />
+        <schema name="kerberos" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>

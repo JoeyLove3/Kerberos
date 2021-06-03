@@ -29,7 +29,7 @@ public class Feistel {
             int line = Integer.parseInt(SBox, 2);
             SBox = "" + xorR0_cut[1] + xorR0_cut[2] + xorR0_cut[3] + xorR0_cut[4];
             int column = Integer.parseInt(SBox, 2);
-            int num = table.S[i][line * 16 + column - 1];
+            int num = table.S[i][line * 16 + column];
             for (int j = 3; j >= 0; j--) {
                 binaryR0.append(num >>> j & 1);
             }
